@@ -18,9 +18,7 @@ router.post("/", function (req, res) {
   db
     .query(sql, [user, pass])
     .then(data => {
-      res
-        .status(200)
-        .json({status: status.OK.code, message: status.OK.message});
+      res.json({status: status.OK.code, message: status.OK.message});
     })
     .catch(error => {
       res.json({status: status.Error.code, message: error});
