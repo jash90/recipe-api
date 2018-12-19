@@ -5,15 +5,7 @@ const status = require("../../status");
 
 const crypto = require("crypto-js");
 
-const {LocalDateTime, nativeJs} = require("js-joda");
-
-const sql = `UPDATE public."user"
-set "accessToken" = $3 , "accessTokenExpiresAt" = NOW()+ INTERVAL '1 day', "refreshToken" = $4, "refreshTokenExpiresAt" = NOW() + INTERVAL '1 week'
-where "login" = $1 AND "password" = $2 AND "accessTokenExpiresAt" < NOW() OR "refreshTokenExpiresAt" < NOW() OR "accessTokenExpiresAt" IS NULL OR "refreshTokenExpiresAt" IS NULL;
-
-SELECT "accessToken", "accessTokenExpiresAt", "refreshToken" , "refreshTokenExpiresAt" 
-from "user"
-where "login" = $1`;
+const { LocalDateTime, nativeJs } = require("js-joda");
 
 const sql1 = `SELECT "accessToken", "accessTokenExpiresAt", "refreshToken" , "refreshTokenExpiresAt" 
 from "user"

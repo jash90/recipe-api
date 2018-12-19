@@ -15,6 +15,7 @@
     "express-promise-router": "^3.0.3",
     "jade": "~1.11.0",
     "js-joda": "^1.9.2",
+    "lodash": "^4.17.11",
     "morgan": "~1.7.0",
     "pg": "^7.4.3",
     "redis": "^2.8.0",
