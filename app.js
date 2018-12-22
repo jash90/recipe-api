@@ -9,7 +9,8 @@ var routes = require('./routes/index');
 
 var loginUser = require("./routes/auth/loginUser");
 var registerUser = require("./routes/auth/registerUser");
-
+var addRecipe = require("./routes/auth/addRecipe");
+var getIngredient = require("./routes/auth/getIngredient");
 
 var app = express();
 
@@ -29,9 +30,8 @@ app.use('/', routes);
 
 app.use('/register',registerUser);
 app.use('/login', loginUser);
-
-
-
+app.use('/addRecipe',addRecipe);
+app.use('/getIngredient', getIngredient);
 
 
 // catch 404 and forward to error handler
