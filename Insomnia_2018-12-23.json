@@ -1,0 +1,148 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-12-23T13:56:36.234Z",
+	"__export_source": "insomnia.desktop.app:v6.2.0",
+	"resources": [
+		{
+			"_id": "wrk_f7940d610a824fc0afe364636030d9c4",
+			"created": 1494325036762,
+			"description": "",
+			"modified": 1510062822578,
+			"name": "Insomnia",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_e39aaae2510e429881bc9c4c8707b57f",
+			"color": null,
+			"created": 1495532889778,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1536132021151,
+			"modified": 1495532889778,
+			"name": "Base Environment",
+			"parentId": "wrk_f7940d610a824fc0afe364636030d9c4",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_3fa8ea88e61849459a5db2048004a90f",
+			"cookies": [],
+			"created": 1505456110531,
+			"modified": 1505456110531,
+			"name": "Default Jar",
+			"parentId": "wrk_f7940d610a824fc0afe364636030d9c4",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_a5b9b4762e304a6e812c183acf61b810",
+			"created": 1545505242800,
+			"description": "",
+			"environment": {
+				"api": "localhost:3000",
+				"token": "token"
+			},
+			"metaSortKey": -1545505242800,
+			"modified": 1545505373173,
+			"name": "RecipeApi",
+			"parentId": "wrk_f7940d610a824fc0afe364636030d9c4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_6134203581234877bacb313d4d913356",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"ingredients\": [\n\t\t{\n\t\t\t\"name\": \"jabłko\",\n\t\t\t\"unit\": \"szt.\",\n\t\t\t\"count\": 10\n\t\t},\n\t\t{\n\t\t\t\"name\": \"ser\",\n\t\t\t\"unit\": \"dag\",\n\t\t\t\"count\": 10\n\t\t}\n\t]\n}"
+			},
+			"created": 1545505252274,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_cb8628ffb38e45cca378a8219cf4cf9d",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1545505252274,
+			"method": "POST",
+			"modified": 1545573270820,
+			"name": "addRecipe",
+			"parameters": [],
+			"parentId": "fld_a5b9b4762e304a6e812c183acf61b810",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ api  }}/addRecipe",
+			"_type": "request"
+		},
+		{
+			"_id": "req_d4ba510283fc4647b906218dfb903a13",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"username\": \"test\",\n\t\"password\": \"test\"\n}"
+			},
+			"created": 1545573240155,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_378677386f744da0ae7bd7c0ba219e9b",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1545573240155,
+			"method": "POST",
+			"modified": 1545573339355,
+			"name": "register",
+			"parameters": [],
+			"parentId": "fld_a5b9b4762e304a6e812c183acf61b810",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ api  }}/register",
+			"_type": "request"
+		},
+		{
+			"_id": "req_1ceb0dfde2e7475281a11748c2f28801",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"username\": \"test\",\n\t\"password\": \"test\"\n}"
+			},
+			"created": 1545573246196,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_aa2744655460468091abc865d4ab34b1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1545573246196,
+			"method": "POST",
+			"modified": 1545573345536,
+			"name": "login",
+			"parameters": [],
+			"parentId": "fld_a5b9b4762e304a6e812c183acf61b810",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ api  }}/login",
+			"_type": "request"
+		}
+	]
+}
